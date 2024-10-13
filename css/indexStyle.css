@@ -1,0 +1,87 @@
+/* Définition des variables de couleur */
+:root {
+    --header-bg-color: rgb(92, 84, 84); /* Couleur de fond du header */
+    --header-text-color: #e60000; /* Couleur du texte du header */
+    --header-link-color: #ffffff; /* Couleur des liens de navigation */
+    --header-link-hover-color: #FFFFFF; /* Couleur des liens au survol */
+    --header-link-bg-hover-color: #4CAF50; /* Couleur de fond au survol des liens */
+}
+
+/* Style de l'en-tête */
+header {
+    background-color: var(--header-bg-color); /* Utilisation de la variable */
+    color: var(--header-text-color); /* Utilisation de la variable */
+    padding: 20px;
+    text-align: center;
+    position: sticky; /* Reste en haut lors du scroll */
+    top: 0;
+    z-index: 1000; /* S'assurer que le header reste au-dessus du contenu */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère sous le header */
+}
+
+/* Style pour le logo/titre */
+header .logo h1 {
+    font-family: 'Cinzel', serif; /* Police élégante pour le logo/titre */
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 2px; /* Espacement entre les lettres pour un effet de style */
+}
+
+/* Menu de navigation */
+nav ul {
+    list-style-type: none; /* Suppression des puces de liste */
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center; /* Centrer le menu */
+    gap: 30px; /* Espace entre les liens du menu augmenté */
+}
+
+/* Liens de navigation */
+nav ul li a {
+    color: var(--header-link-color); /* Utilisation de la variable */
+    text-decoration: none; /* Suppression du soulignement */
+    font-weight: bold;
+    font-size: 1.2em; /* Taille de police légèrement augmentée */
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transition douce pour hover */
+    border-radius: 5px; /* Légère arrondie pour hover */
+}
+
+/* Effet au survol des liens */
+nav ul li a:hover {
+    color: var(--header-link-hover-color); /* Utilisation de la variable */
+    background-color: var(--header-link-bg-hover-color); /* Utilisation de la variable */
+}
+
+/* Effet de survol */
+.card-hover {
+    transition: all 0.3s ease; /* Transition douce pour l'animation */
+}   
+
+.card-hover:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+    transform: scale(1.05); /* Légère mise à l'échelle pour créer un effet de zoom */
+    background-color: #f8f9fa; /* Changement de couleur d'arrière-plan lors du survol */
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Cela permet au contenu principal de s'étirer pour prendre toute la place disponible */
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgb(92, 84, 84);
+    color: white;
+    position: relative; /* Par défaut, le footer sera positionné à la fin du contenu */
+    bottom: 0;
+    width: 100%;
+}
